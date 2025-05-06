@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Video Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud@1.1.0/src/wordcloud2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="theme-toggle">
+      <label>
+        <input type="checkbox" id="darkToggle" />
+        Dark Mode
+      </label>
+    </div>
+
+    <div class="container">
+      <h1>YouTube Video Analyzer</h1>
+
+      <div class="input-area" id="dropZone">
+        <input
+          type="text"
+          id="videoInput"
+          placeholder="Enter YouTube video URL or ID"
+        />
+        <button onclick="analyzeVideo()">Analyze</button>
+        <button id="downloadBtn">Download Analysis</button>
+      </div>
+
+      <div id="loading" style="display: none">
+        Analyzing video, please wait...
+      </div>
+
+      <div class="result" id="result" style="display: none"></div>
+      <div class="thumbnail" id="thumbnail" style="display: none"></div>
+      <div class="engagement" id="engagement" style="display: none"></div>
+
+      <h3 id="transcriptTitle" style="display: none">Transcript</h3>
+      <div class="transcript" id="transcript" style="display: none"></div>
+
+      <h3 id="videoSentimentTitle" style="display: none">Video Sentiment</h3>
+      <div class="sentiment" id="videoSentiment" style="display: none"></div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search comments..."
+        style="display: none"
+      />
+      <div class="comments" id="comments" style="display: none"></div>
+
+      <h3 id="commentSentimentTitle" style="display: none">
+        Comment Sentiment
+      </h3>
+      <div class="sentiment" id="commentSentiment" style="display: none"></div>
+
+      <h3 id="sentimentChartTitle" style="display: none">
+        Comment Sentiment Chart
+      </h3>
+      <canvas
+        id="sentimentChart"
+        width="600"
+        height="300"
+        style="display: none"
+      ></canvas>
+
+      <h3 id="wordCloudTitle" style="display: none">Comment Word Cloud</h3>
+      <canvas
+        id="wordCloudCanvas"
+        width="600"
+        height="300"
+        style="display: none"
+      ></canvas>
+
+      <div class="error" id="error" style="display: none"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

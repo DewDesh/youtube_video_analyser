@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #181818;
+  color: #f4f4f4;
+}
+
+h1, h3 {
+  color: #cc0000;
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a30000;
+}
+
+.input-area {
+  margin-bottom: 20px;
+}
+
+.result, .comments, .transcript, .sentiment, .engagement {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark .result, 
+body.dark .comments, 
+body.dark .transcript, 
+body.dark .sentiment, 
+body.dark .engagement {
+  background-color: #333;
+  color: #fff;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.watch-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.watch-button:hover {
+  background-color: #cc0000;
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+}
+
+#wordCloudCanvas {
+  display: block;
+  margin: 20px auto;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 14px;
+  color: #000;
+}
+
+body.dark .theme-toggle {
+  color: #fff;
+}
+
+#dropZone {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+}
+
+#dropZone.dragover {
+  border-color: #cc0000;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+#sentimentChart {
+  display: block;
+  margin: 0 auto 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark #sentimentChart {
+  background-color: #333;
+  color: white;
+}
