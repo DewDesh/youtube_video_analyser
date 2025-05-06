@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyBocojCJEATjPwb7Jv53GHCjBs5zq4TjZg"; // Replace with your YouTube Data API key
+const API_KEY = "YOUR_API_KEY"; // Replace with your YouTube Data API key
 
 // Theme toggle
 const darkToggle = document.getElementById("darkToggle");
